@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#08050d">
+<title>CYСYX — The Dark Room</title>
+<style>
+:root{--violet:#9d55ff;--red:#ff244f;--muted:#b8accb}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#07050b;color:#f7f1ff;font-family:Georgia,"Times New Roman",serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 50% 15%,#28113f 0%,#100918 42%,#050408 78%)}
+.grain{position:fixed;inset:0;pointer-events:none;opacity:.09;z-index:5;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E")}
+main{width:min(920px,92%);margin:auto}
+.hero{min-height:88vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:70px 12px 48px;position:relative}
+.sig{color:var(--red);font-size:12px;letter-spacing:.42em;text-transform:uppercase}
+h1{font-size:clamp(3.2rem,13vw,8.5rem);line-height:.86;letter-spacing:-.065em;margin:25px 0 18px;text-shadow:0 0 18px #9d55ff70,0 0 55px #6e22b955;animation:flicker 7s infinite}
+h1 span{display:block;color:var(--violet);font-style:italic;font-weight:normal}
+.subtitle{color:var(--muted);letter-spacing:.18em;text-transform:uppercase;font-size:12px}
+.rune{color:#5e376e;font-size:27px;letter-spacing:.5em;margin:26px 0}
+button{cursor:pointer;background:transparent;color:#f9eaff;border:1px solid #a95cff;padding:13px 19px;letter-spacing:.12em;text-transform:uppercase;font-size:11px;transition:.25s}
+button:hover{background:#6d2495;box-shadow:0 0 24px #a855f766}
+.audio-note{color:#9b8ba9;font:12px Arial,sans-serif;margin-top:12px;max-width:340px;line-height:1.5}
+.panel{border:1px solid #59366c;background:linear-gradient(145deg,#160d20dd,#0b0810f2);padding:clamp(22px,5vw,44px);margin:20px 0 34px;box-shadow:0 0 45px #6d2d7a12;position:relative}
+.panel:before,.panel:after{content:"✦";position:absolute;color:var(--red);font-size:17px}
+.panel:before{top:12px;left:14px}.panel:after{bottom:12px;right:14px}
+h2{font-size:clamp(1.5rem,5vw,2.2rem);font-weight:normal;margin:0 0 22px;color:#d5a8ff}
+.price{font-size:clamp(1rem,3.5vw,1.45rem);line-height:1.9;color:#fff}
+.price strong{color:#ff6c8a;font-weight:normal}
+hr{border:0;border-top:1px solid #52345f;margin:25px 0}
+h3{font-size:1.1rem;font-weight:normal;color:#ff7a9c;letter-spacing:.06em}
+ul{list-style:none;padding:0;margin:15px 0 0}
+li{padding:9px 0 9px 25px;position:relative;color:#e8deef;line-height:1.55}
+li:before{content:"✧";position:absolute;left:0;color:var(--red)}
+.warning{color:#d0c2d8;line-height:1.8;font-size:15px}
+.warning strong{color:#ff6c8a}
+.tag{display:inline-block;color:#fff;border:1px solid #743b8e;padding:7px 13px;margin:5px 0;background:#190e22}
+footer{text-align:center;color:#6f5b7e;padding:30px 10px 55px;font:10px Arial,sans-serif;letter-spacing:.3em;text-transform:uppercase}
+@keyframes flicker{0%,94%,96%,100%{opacity:1}95%{opacity:.75}97%{opacity:.92}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<main>
+<section class="hero">
+  <div class="sig">✦ enter at your own risk ✦</div>
+  <h1>THE <span>DARK</span> ROOM</h1>
+  <div class="subtitle">trust • deals • shadows</div>
+  <div class="rune">☾ ⛧ ☽</div>
+  <div class="tag">@cicyx — original tag</div>
+  <p class="audio-note">A dark ambient melody is waiting in the shadows.</p>
+  <button id="soundBtn" type="button">☾ Activate the darkness / sound</button>
+  <div class="audio-note" id="soundStatus">Браузер может блокировать автоматический звук — нажми кнопку, чтобы включить мелодию.</div>
+</section>
+
+<section class="panel">
+  <h2>☠ Top trust</h2>
+  <div class="price"><strong>70000₸</strong> / <strong>1500$</strong> / <strong>50000</strong> (голды)</div>
+  <hr>
+  <h3>🔔 Важные моменты</h3>
+  <ul>
+    <li>Фейков не ручаюсь.</li>
+    <li>За блок/слёт банков не ручаюсь. ❗️</li>
+    <li>0% со сделки. ❗️</li>
+    <li>10% возврат с покупки. ❗️</li>
+    <li>Ручение 150% от суммы. ❗️</li>
+    <li>Замы/стажи — прайс в лс. ❗️</li>
+  </ul>
+  <hr>
+  <p class="warning">💬 Сделка <strong>0%</strong>, можно на чай по желанию. ☕️</p>
+</section>
+
+<section class="panel">
+  <h2>⚠ Опасайтесь фейков</h2>
+  <p class="warning">Мой тег <strong>@cicyx</strong> оригинальный. Если вас обманул мой фейк, то уже ничего не поделать. Я за них не ручаюсь, не за кому банков, случайный перевод и бан кошельков, и никогда не беру ответственность. ❗️</p>
+  <hr>
+  <div class="sig">trust nobody in the dark</div>
+</section>
+<footer>☾ cicyx • the dark room • beware of fakes ☽</footer>
+</main>
+<script>
+(() => {
+  let ctx, master, timer, active = false;
+  const btn = document.getElementById('soundBtn');
+  const status = document.getElementById('soundStatus');
+  function playNote(freq, start, duration, type='sine', volume=.025) {
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = type; osc.frequency.setValueAtTime(freq, start);
+    gain.gain.setValueAtTime(.0001, start);
+    gain.gain.exponentialRampToValueAtTime(volume, start + .08);
+    gain.gain.exponentialRampToValueAtTime(.0001, start + duration);
+    osc.connect(gain); gain.connect(master);
+    osc.start(start); osc.stop(start + duration + .03);
+  }
+  function startMusic() {
+    if (active) { ctx.suspend(); active = false; btn.textContent='☾ Resume the darkness / sound'; status.textContent='Звук на паузе.'; return; }
+    ctx = ctx || new (window.AudioContext || window.webkitAudioContext)();
+    ctx.resume();
+    master = ctx.createGain(); master.gain.value=.55; master.connect(ctx.destination);
+    active = true; btn.textContent='Ⅱ Pause the darkness / sound';
+    status.textContent='Тёмная атмосферная мелодия включена.';
+    const notes=[55,65.41,73.42,82.41,65.41,58.27,77.78,61.74];
+    let step=0;
+    function loop(){
+      if(!active) return;
+      const now=ctx.currentTime;
+      const base=notes[step%notes.length];
+      playNote(base,now,2.8,'triangle',.04);
+      playNote(base*2.01,now+.15,2.1,'sine',.018);
+      if(step%2===0) playNote(base*3.02,now+.45,1.6,'sawtooth',.006);
+      step++; timer=setTimeout(loop,1500);
+    }
+    loop();
+  }
+  btn.addEventListener('click',startMusic);
+  // Try autoplay; browsers normally require a user gesture before audible playback.
+  window.addEventListener('load',()=>{try{startMusic();}catch(e){status.textContent='Нажми кнопку, чтобы включить звук.';}});
+})();
+</script>
+</body>
+</html>
